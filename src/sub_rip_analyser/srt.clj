@@ -2,7 +2,7 @@
   (:require
     [clojure.string :as str]))
 
-(defn ->map
+(defn- ->map
   [m]
   (let [time (second m)
         time-splitted (str/split time #" --> ")]
@@ -23,7 +23,7 @@
   ;; Line 4: A blank line containing no text, indicating the end of this subtitle
 
   ;; Step 1 Split whole string into a sequence of lines.
-  ;; Step 2 Seperate Entries (4 lines long)
+  ;; Step 2 Separate Entries (4 lines long)
   ;; Step 3 (optional) Convert to Map
   (->> s
        (str/split-lines)

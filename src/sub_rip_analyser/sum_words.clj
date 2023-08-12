@@ -72,7 +72,6 @@
     (map :text)
     (map (if exclude-soundeffects remove-soundeffect identity))
     (map remove-punctuation)
-       ;; TODO: Alles zwischen Leerzeichen entfernen
     (map (fn [text]
            (str/split text #" ")))
     (map (partial remove empty?))
